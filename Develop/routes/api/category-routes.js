@@ -32,9 +32,10 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  console.log("hitting the create route for category")
   try {
     const categoryData = await Category.create({
-      category_id: req.body.category_id,
+      category_name: req.body.category_name,
     });
     res.status(200).json(categoryData);
   } catch (err) {
@@ -45,8 +46,12 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const categoryData = await Category.update({
-      prodcut_id: req.body.category_id,
-    });
+      category_name: req.params.category_name,
+    }
+    , {where: {
+      category_id: req.params.id
+    } }
+    );
     res.status(200).json(categoryData);
   } catch (err) {
     res.status(400).json(err);
