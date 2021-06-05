@@ -1,4 +1,5 @@
 # ECommerceBackEnd
+**[DEMONSTRATION VIDEO](https://drive.google.com/file/d/1VX_gz69mWlQY77iXFnc2qRoopYFuyopg/view)**  
 
 ## Description
 This app is the back-end of a e-commerce site that allows the user to manage a database of products through API routes and CRUD operations.
@@ -17,7 +18,6 @@ You'll need vsCode. First use `npm init -y`, then `npm install` to include all n
 Once everything is installed, input ```node server.js``` or ```nodemon server.js``` to initiate the app and look up http://localhost:3001 in Insomnia or other API client of choice.
 
 
-![Demonstration picture]()  
 
 
 ## License
